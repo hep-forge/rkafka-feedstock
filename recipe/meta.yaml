@@ -1,5 +1,6 @@
 {% set versions = {
-    "HEAD": "HEAD"
+    "HEAD": "HEAD",
+    "0.1": "234c271ebd1570ecf45abc38ba49b8795f5859b9"
 } %}
 
 {% set version = environ.get('COMMIT_VERSION', None) %}
@@ -12,7 +13,7 @@ package:
 
 source:
   git_url: "https://git.ligo.org/kagra/libraries-addons/root/kafka"
-  git_rev: {{ version }}
+  git_rev: "v{{ version }}"
 
 requirements:
   build:
