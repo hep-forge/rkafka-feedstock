@@ -34,7 +34,6 @@ requirements:
   run:
     - root-plus
     - cparser
-    - librdkafka
 
 about:
   home: "https://git.ligo.org/kagra/libraries-addons/root/kafka"
