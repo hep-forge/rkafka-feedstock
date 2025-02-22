@@ -29,10 +29,12 @@ requirements:
   host:
     - root-plus
     - cparser
+    - librdkafka
 
   run:
     - root-plus
     - cparser
+    - librdkafka
 
 about:
   home: "https://git.ligo.org/kagra/libraries-addons/root/kafka"
