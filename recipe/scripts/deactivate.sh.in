@@ -1,10 +1,3 @@
 #!/usr/bin/env bash
 
-# reinstate the backup from outside the environment
-if [ ! -z "${CONDA_BACKUP_LHAPDF_DATA_PATH}" ]; then
-	export LHAPDF_DATA_PATH="${CONDA_BACKUP_LHAPDF_DATA_PATH}"
-	unset CONDA_BACKUP_LHAPDF_DATA_PATH
-# no backup, just unset
-else
-	unset LHAPDF_DATA_PATH
-fi
+export CLING_MODULEMAP_FILES=$(echo "$CLING_MODULEMAP_FILES" | sed "s|${CONDA_PREFIX}/@PROJECT_NAME@.modulemap:||g")
